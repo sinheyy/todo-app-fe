@@ -1,12 +1,12 @@
 body{
-  color: lightblue !important ;
-  background-color: aliceblue !important; 
+  color: #CBC3E3 !important ;
+  background-color: #F2ECFD !important; 
 }
 
 
 
 .todo-item{
-  border: 1px solid lightblue;
+  border: 1px solid #CBC3E3;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,7 @@ body{
 .input-box{
   padding: 10px;
   width:100%;
-  border: 1px solid lightblue;
+  border: 1px solid #CBC3E3;
   
   
 }
@@ -33,22 +33,22 @@ body{
   height: 40px;
   width: 100%;
   border: none;
-  background-color: lightblue;
+  background-color: #CBC3E3;
   color: white;
 }
 .button-add:hover{
   background-color: white;
-  color: lightblue;
-  border: 2px solid lightblue;
+  color: #CBC3E3;
+  border: 2px solid #CBC3E3;
 }
 .button-delete{
   background-color: white;
-  border: 2px solid lightblue;
-  color: lightblue;
+  border: 2px solid #CBC3E3;
+  color: #CBC3E3;
   margin: 10px;
 }
 .button-delete:hover{
-  background-color: lightblue;
+  background-color: #CBC3E3;
   color: #ffffff;
 }
 
