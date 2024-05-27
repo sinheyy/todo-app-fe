@@ -1,38 +1,49 @@
-body{
-  color: #CBC3E3 !important ;
+body {
+  color: #CBC3E3 !important;
   background-color: #F2ECFD !important;
 }
 
-.todo-item{
+.todo-item {
   border: 1px solid #CBC3E3;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .todo-item:hover {
   text-decoration: underline;
 }
-.todo-content{
+
+.todo-content {
   font-family: 'Ownglyph_meetme-Rg';
   font-size: 1.2rem;
-  padding:1em
+  padding: 1em
 }
-.add-item-row{
-  margin-top:50px !important;
+
+.add-item-row {
+  margin-top: 50px !important;
   margin-bottom: 30px;
 }
-.input-box{
+
+.input-box {
   padding: 10px;
-  width:100%;
+  width: 100%;
   border: 1px solid #CBC3E3;
   font-family: 'Ownglyph_meetme-Rg';
   font-size: 1.3rem;
 }
-.input-box:focus{
+
+.input-box:focus {
   outline: none;
 }
-.button-add{
+
+button {
+  background-color: #CBC3E3;
+  color: white;
+}
+
+.button-add {
   font-family: 'Ownglyph_meetme-Rg';
   font-size: 1.3rem;
   height: 40px;
@@ -41,24 +52,27 @@ body{
   background-color: #CBC3E3;
   color: white;
 }
-.button-add:hover{
+
+.button-add:hover {
   background-color: white;
   color: #CBC3E3;
   border: 2px solid #CBC3E3;
 }
-.button-delete{
+
+.button-delete {
   background-color: white;
   border: 2px solid #CBC3E3;
   color: #CBC3E3;
   margin: 10px;
   font-family: 'Ownglyph_meetme-Rg';
 }
-.button-delete:hover{
+
+.button-delete:hover {
   background-color: #CBC3E3;
   color: #ffffff;
 }
 
-.item-complete{
+.item-complete {
   background-color: gainsboro;
   color: white;
 }
@@ -67,10 +81,48 @@ body{
   text-decoration: underline;
 }
 
-.todo-text{
+.todo-text {
   font-family: 'Uiyeun';
   font-size: 2.5rem;
 }
+
+.login-box {
+  border: 1px solid #CBC3E3;
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+.login-box label {
+  font-weight: 700;
+}
+
+.display-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between
+}
+
+.button-primary {
+  background-color: #CBC3E3 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.red-error {
+  color: red;
+  font-weight: bold;
+}
+
 
 @font-face {
   font-family: 'Uiyeun';
