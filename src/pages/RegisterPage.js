@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import api from "../utils/api";
+import { seNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
     const [name, setName] = useState('');
@@ -9,6 +10,7 @@ const RegisterPage = () => {
     const [password, setPassword] = useState('');
     const [secPassword, setSecPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -20,12 +22,10 @@ const RegisterPage = () => {
             
             const response = await api.post('/user', {name, email, password});
             console.log("rrrrr", response);
+            navigate("/login");
         } catch (error) {
             setError(error.message);
         }
-
-
-
     }
 
     return (
