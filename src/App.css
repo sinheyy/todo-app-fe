@@ -24,6 +24,7 @@ body {
 .add-item-row {
   margin-top: 50px !important;
   margin-bottom: 30px;
+  padding: 0px;
 }
 
 .input-box {
@@ -47,29 +48,43 @@ button {
   font-family: 'Ownglyph_meetme-Rg';
   font-size: 1.3rem;
   height: 40px;
-  width: 100%;
+  width: 40px;
   border: none;
-  background-color: #CBC3E3;
+  padding: 0px;
+  margin: 0px;
   color: white;
+  background-color: transparent;
+}
+
+.button-add img {
+  width: 40px;
+  height: fit-content;
 }
 
 .button-add:hover {
-  background-color: white;
-  color: #CBC3E3;
-  border: 2px solid #CBC3E3;
+  opacity: 0.5;
 }
 
 .button-delete {
-  background-color: white;
-  border: 2px solid #CBC3E3;
+  background-color: transparent;
+  border: none;
   color: #CBC3E3;
   margin: 10px;
   font-family: 'Ownglyph_meetme-Rg';
+  width: 50px;
+}
+
+.button-delete img {
+  width: 100%;
+  height: auto;
 }
 
 .button-delete:hover {
-  background-color: #CBC3E3;
-  color: #ffffff;
+  opacity: 0.5;
+}
+
+.button-delete:active {
+  opacity: 0.5;
 }
 
 .item-complete {
@@ -82,7 +97,7 @@ button {
 }
 
 .todo-text {
-  font-family: 'Uiyeun';
+  font-family: 'Ownglyph_meetme-Rg';
   font-size: 2.5rem;
 }
 
@@ -96,6 +111,13 @@ button {
 
 .login-box label {
   font-weight: 700;
+}
+
+.display-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
 }
 
 .display-center {
@@ -118,21 +140,44 @@ button {
   border: none !important;
 }
 
+.button-back {
+  background-color: #CBC3E3;
+  color: white;
+  margin: 10px;
+  font-family: 'Ownglyph_meetme-Rg';
+  font-size: 1.3rem;
+  width: 150px;
+  height: 40px;
+  border: none;
+}
+
 .red-error {
   color: red;
   font-weight: bold;
 }
 
-.logout-button{
+.logout-button {
   cursor: pointer;
+  font-family: 'Ownglyph_meetme-Rg';
+  font-size: 1.5rem;
 }
 
+.logout-button:hover {
+  text-decoration: underline;
+}
 
-@font-face {
-  font-family: 'Uiyeun';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.profile-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ownglyph_meetme-Rg';
+  font-size: 1.3rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
 }
 
 @font-face {

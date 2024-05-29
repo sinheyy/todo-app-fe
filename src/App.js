@@ -6,8 +6,8 @@ import LoginPage from "./pages/LoginPage";
 import TodoPage from "./pages/TodoPage";
 import RegisterPage from "./pages/RegisterPage";
 import PrivateRoute from "./route/PrivateRoute";
+import ProfilePage from "./pages/ProfilePage";
 import api from "./utils/api";
-
 
 function App() {
   const [user, setUser] = useState(null);
@@ -33,11 +33,10 @@ function App() {
 
   return (
     <Routes>
-
       <Route path="/" element={<PrivateRoute user={user}><TodoPage user={user} setUser={setUser} /></PrivateRoute>} />
       <Route path="/register" element={<RegisterPage />} />
-
       <Route path="/login" element={<LoginPage user={user} setUser={setUser} />} />
+      <Route path="/profile" element={<PrivateRoute user={user}><ProfilePage user={user} setUser={setUser} /></PrivateRoute>} />
     </Routes>
   );
 }
