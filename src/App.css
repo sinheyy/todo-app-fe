@@ -123,6 +123,10 @@ button {
   font-weight: bold;
 }
 
+.logout-button{
+  cursor: pointer;
+}
+
 
 @font-face {
   font-family: 'Uiyeun';

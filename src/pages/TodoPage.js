@@ -6,13 +6,13 @@ import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import api from "../utils/api";
 
-const TodoPage = () => {
+const TodoPage = ({ user, setUser }) => {
     const [todoList, setTodoList] = useState([]);   // task 리스트 저장
     const [todoValue, setTodoValue] = useState("");
 
     const getTasks = async () => {
         const response = await api.get('/tasks');
-        // console.log("rrrrrr : ", response);
+        // console.log("taskList", response.data.data);
         setTodoList(response.data.data);
     }
 
@@ -69,12 +69,28 @@ const TodoPage = () => {
         }
     }
 
+    const logout = () => {
+        sessionStorage.removeItem("token");
+        setUser(null);
+    }
+
     useEffect(() => {
         getTasks();
     }, []);
 
     return (
         <Container>
+            {
+                user ?
+                    (<Row className="logout-button" onClick={logout}>
+                        <Col>로그아웃</Col>
+                    </Row>)
+                    :
+                    (<Row >
+                        <Col>로그인</Col>
+                    </Row>)
+            }
+
             <Row className="add-item-row">
                 <Col xs={12} sm={10}>
                     <input
