@@ -34,23 +34,23 @@ const RegisterPage = () => {
             <Form className="login-box" onSubmit={handleSubmit}>
                 <h1>회원가입</h1>
                 <Form.Group className="mb-3" controlId="formName">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="string" placeholder="Name" onChange={(event) => setName(event.target.value)} />
+                    <Form.Label>이름</Form.Label>
+                    <Form.Control type="string" placeholder="이름" onChange={(event) => setName(event.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" onChange={(event) => setEmail(event.target.value)} />
+                    <Form.Label>이메일 주소</Form.Label>
+                    <Form.Control type="email" placeholder="이메일을 입력해주세요" onChange={(event) => setEmail(event.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} />
+                    <Form.Label>비밀번호</Form.Label>
+                    <Form.Control type="password" placeholder="비밀번호" onChange={(event) => setPassword(event.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>re-enter the password</Form.Label>
-                    <Form.Control type="password" placeholder="re-enter the password" onChange={(event) => setSecPassword(event.target.value)} />
+                    <Form.Label>비밀번호 재확인</Form.Label>
+                    <Form.Control type="password" placeholder="비밀번호를 다시 입력해주세요" onChange={(event) => setSecPassword(event.target.value)} />
                 </Form.Group>
 
                 {error && <div className="red-error">{error}</div>}

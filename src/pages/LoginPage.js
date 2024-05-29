@@ -41,20 +41,20 @@ const LoginPage = ({ user, setUser }) => {
             <Form className="login-box" onSubmit={handleLogin}>
                 <h1>로그인</h1>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" onChange={(event) => setEmail(event.target.value)} />
+                    <Form.Label>이메일 주소</Form.Label>
+                    <Form.Control type="email" placeholder="이메일을 입력해주세요" onChange={(event) => setEmail(event.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} />
+                    <Form.Label>비밀번호</Form.Label>
+                    <Form.Control type="password" placeholder="비밀번호를 입력해주세요" onChange={(event) => setPassword(event.target.value)} />
                 </Form.Group>
 
                 {error && <div className="red-error">{error}</div>}
 
                 <div className="button-box">
                     <Button type="submit" className="button-primary">
-                        Login
+                        로그인
                     </Button>
                     <span>
                         계정이 없다면? <Link to="/register">회원가입 하기</Link>
